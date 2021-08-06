@@ -20,7 +20,11 @@ public class Manejador {
     
         public Manejador(String palabra) {
         this.palabra = palabra;
-        iniciar(palabra);
+        iniciar(ventana.getPalabra());
+        
+        ventana.setPalabraJLabel(ventana.getPalabraJLabel());
+        
+
         //iniciar(this.palabra);
         
     }

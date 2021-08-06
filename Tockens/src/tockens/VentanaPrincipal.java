@@ -5,6 +5,7 @@
  */
 package tockens;
 
+import javax.swing.JLabel;
 import javax.swing.WindowConstants;
 
 /**
@@ -116,10 +117,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void ingresoJBotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresoJBotonMouseClicked
         palabra = ingresoJTextF.getText();
         Manejador manejador = new Manejador(palabra);
-        palabraJLabel.setText(palabra);
+        //palabraJLabel.setText(palabra);
         ingresoJTextF.setText("");
         
     }//GEN-LAST:event_ingresoJBotonMouseClicked
+
+    public String getPalabra() {
+        return palabra;
+    }
+
+    public void setPalabra(String palabra) {
+        this.palabra = palabra;
+    }
+
+    public JLabel getPalabraJLabel() {
+        return palabraJLabel;
+    }
+
+    public void setPalabraJLabel(JLabel palabraJLabel) {
+        this.palabraJLabel = palabraJLabel;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
