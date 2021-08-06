@@ -10,6 +10,6 @@ package tockens;
  * @author randysmc
  */
 public enum Token {
-    ID, NUMERO, CARACTER, ERROR;
+    NUMERO, ID, CARACTER, ERROR;
     
 }

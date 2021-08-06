@@ -19,9 +19,7 @@ public class Manejador {
         char[] arreglo = palabra.toCharArray();
         System.out.println(arreglo);
         System.out.println("numero de caracteres: " +arreglo.length);
-        /*System.out.println(palabra);
-        System.out.println(letras);
-        System.out.println(numeros);*/
+        
     }
     
     public void separarPalabras(String palabra){
