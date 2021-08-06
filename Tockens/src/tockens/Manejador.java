@@ -7,8 +7,9 @@ import static tockens.Token.*;
 
 
 public class Manejador {
+    VentanaPrincipal ventana = new VentanaPrincipal();
     private Token token = ID; 
-    String palabra ="";
+    String palabra;
     String  id ="";
     String letras="";
     String numeros = "";
@@ -17,9 +18,22 @@ public class Manejador {
     int inicio, fin;
     Scanner teclado = new Scanner(System.in);
     
-    public void ingresarPalabra(){
-        System.out.print("Ingrese la cadena de texto");
-        palabra = teclado.nextLine();
+        public Manejador(String palabra) {
+        this.palabra = palabra;
+        iniciar(palabra);
+        //iniciar(this.palabra);
+        
+    }
+        
+        public void iniciar(String palabra){
+            separarPalabras(palabra);
+        }
+    
+    
+        public void ingresarPalabra(){
+        //System.out.print("Ingrese la cadena de texto");
+        //palabra = teclado.nextLine();
+        
         //separarPalabras(palabra);
         //char [] arreglo = palabra.toCharArray();
         //System.out.println(arreglo);
@@ -27,7 +41,7 @@ public class Manejador {
         
     }
     
-    public void separarPalabras(String palabra){
+        public void separarPalabras(String palabra){
         for (int i = 0; i < palabra.length(); i++) {
             if(Character.isLetter(palabra.charAt(i))){
                 letras+= palabra.charAt(i);      
