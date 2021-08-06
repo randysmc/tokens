@@ -2,23 +2,28 @@
 package tockens;
 
 import java.util.Scanner;
+import static tockens.Token.*;
+
 
 
 public class Manejador {
-    private Token token; 
+    private Token token = ID; 
     String palabra ="";
-    String letras ="";
+    String  id ="";
+    String letras="";
     String numeros = "";
-    
+    String caracter = "";
+    String error = "";
+    int inicio, fin;
     Scanner teclado = new Scanner(System.in);
     
     public void ingresarPalabra(){
         System.out.print("Ingrese la cadena de texto");
         palabra = teclado.nextLine();
         //separarPalabras(palabra);
-        char[] arreglo = palabra.toCharArray();
-        System.out.println(arreglo);
-        System.out.println("numero de caracteres: " +arreglo.length);
+        //char [] arreglo = palabra.toCharArray();
+        //System.out.println(arreglo);
+        //System.out.println("numero de caracteres: " +arreglo.length);
         
     }
     
@@ -31,9 +36,44 @@ public class Manejador {
                 numeros += palabra.charAt(i);
                 
             }
+            if(Character.isSpaceChar(palabra.charAt(i))){
+                inicio =0;
+                fin=i;
+                //int temporal = fin;
+                //inicio = 0;
+                generarPalabra(0, fin, palabra);
+                
+            }
             
         }
         
     }
+    
+    public void generarPalabra(int inicio, int fin, String cadena){
+        String nuevaPalabra = cadena.substring(inicio, fin);
+        char [] palabra = nuevaPalabra.toCharArray();
+        //ordenarPalabra(palabra);
+        for (int i = 0; i < palabra.length; i++) {
+            System.out.print(i);
+            
+        }
+        //System.out.println(nuevaPalabra);
+        
+        
+    }
+    
+   /* public void ordenarPalabra(char[] palabra){
+        for (int i = 0; i < palabra.length; i++) {
+            if(Character.isLetter(palabra.)){
+                token = CARACTER;
+            }
+            if(Character.isDigit(palabra.charAt(i))){
+                token = NUMERO;
+            }
+            
+       }
+        
+        
+    }*/
     
 }

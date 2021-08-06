@@ -12,4 +12,6 @@ package tockens;
 public enum Token {
     NUMERO, ID, CARACTER, ERROR;
     
+    
+    
 }
